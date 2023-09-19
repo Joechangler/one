@@ -1,0 +1,559 @@
+2023-09-18 10:15:36 -Skipping MapperFactoryBean with name 'bizArticleMapper' and 'com.zyd.blog.persistence.mapper.BizArticleMapper' mapperInterface. Bean already defined with the same name!
+2023-09-18 10:15:36 -No MyBatis mapper was found in '[com.zyd.blog]' package. Please check your configuration.
+2023-09-18 10:15:37 -current oneblog version：v2.3.4
+2023-09-18 10:15:39 -Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'freeMarkerConfig': Invocation of init method failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Table 'dblog.sys_config' doesn't exist
+### The error may exist in com/zyd/blog/persistence/mapper/SysConfigMapper.java (best guess)
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT id,create_time,update_time,config_key,config_value  FROM sys_config
+### Cause: java.sql.SQLSyntaxErrorException: Table 'dblog.sys_config' doesn't exist
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Table 'dblog.sys_config' doesn't exist
+2023-09-18 10:15:39 -Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'freeMarkerConfig': Invocation of init method failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Table 'dblog.sys_config' doesn't exist
+### The error may exist in com/zyd/blog/persistence/mapper/SysConfigMapper.java (best guess)
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT id,create_time,update_time,config_key,config_value  FROM sys_config
+### Cause: java.sql.SQLSyntaxErrorException: Table 'dblog.sys_config' doesn't exist
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Table 'dblog.sys_config' doesn't exist
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:415)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.zyd.blog.BlogWebApplication.main(BlogWebApplication.java:25)
+Caused by: org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Table 'dblog.sys_config' doesn't exist
+### The error may exist in com/zyd/blog/persistence/mapper/SysConfigMapper.java (best guess)
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT id,create_time,update_time,config_key,config_value  FROM sys_config
+### Cause: java.sql.SQLSyntaxErrorException: Table 'dblog.sys_config' doesn't exist
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Table 'dblog.sys_config' doesn't exist
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:239)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:91)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:441)
+	at com.sun.proxy.$Proxy102.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at com.sun.proxy.$Proxy134.selectAll(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy135.selectAll(Unknown Source)
+	at com.zyd.blog.business.service.impl.SysConfigServiceImpl.getConfigs(SysConfigServiceImpl.java:58)
+	at com.zyd.blog.business.service.impl.SysConfigServiceImpl$$FastClassBySpringCGLIB$$b7503c03.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:88)
+	at com.zyd.blog.business.aspect.RedisCacheAspect.handle(RedisCacheAspect.java:45)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:644)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:633)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:95)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
+	at com.zyd.blog.business.service.impl.SysConfigServiceImpl$$EnhancerBySpringCGLIB$$d3eeb27a.getConfigs(<generated>)
+	at com.zyd.blog.framework.config.FreeMarkerConfig.setSharedVariable(FreeMarkerConfig.java:44)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:333)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:157)
+	... 19 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: Table 'dblog.sys_config' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:497)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
+	... 67 common frames omitted
+2023-09-18 10:38:09 -Skipping MapperFactoryBean with name 'bizArticleMapper' and 'com.zyd.blog.persistence.mapper.BizArticleMapper' mapperInterface. Bean already defined with the same name!
+2023-09-18 10:38:09 -No MyBatis mapper was found in '[com.zyd.blog]' package. Please check your configuration.
+2023-09-18 10:38:10 -current oneblog version：v2.3.4
+2023-09-18 10:38:12 -Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'freeMarkerConfig': Invocation of init method failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Table 'dblog.sys_config' doesn't exist
+### The error may exist in com/zyd/blog/persistence/mapper/SysConfigMapper.java (best guess)
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT id,create_time,update_time,config_key,config_value  FROM sys_config
+### Cause: java.sql.SQLSyntaxErrorException: Table 'dblog.sys_config' doesn't exist
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Table 'dblog.sys_config' doesn't exist
+2023-09-18 10:38:12 -Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'freeMarkerConfig': Invocation of init method failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Table 'dblog.sys_config' doesn't exist
+### The error may exist in com/zyd/blog/persistence/mapper/SysConfigMapper.java (best guess)
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT id,create_time,update_time,config_key,config_value  FROM sys_config
+### Cause: java.sql.SQLSyntaxErrorException: Table 'dblog.sys_config' doesn't exist
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Table 'dblog.sys_config' doesn't exist
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:415)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.zyd.blog.BlogWebApplication.main(BlogWebApplication.java:25)
+Caused by: org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Table 'dblog.sys_config' doesn't exist
+### The error may exist in com/zyd/blog/persistence/mapper/SysConfigMapper.java (best guess)
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT id,create_time,update_time,config_key,config_value  FROM sys_config
+### Cause: java.sql.SQLSyntaxErrorException: Table 'dblog.sys_config' doesn't exist
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Table 'dblog.sys_config' doesn't exist
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:239)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:91)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:441)
+	at com.sun.proxy.$Proxy102.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at com.sun.proxy.$Proxy134.selectAll(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy135.selectAll(Unknown Source)
+	at com.zyd.blog.business.service.impl.SysConfigServiceImpl.getConfigs(SysConfigServiceImpl.java:58)
+	at com.zyd.blog.business.service.impl.SysConfigServiceImpl$$FastClassBySpringCGLIB$$b7503c03.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:88)
+	at com.zyd.blog.business.aspect.RedisCacheAspect.handle(RedisCacheAspect.java:45)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:644)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:633)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:95)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
+	at com.zyd.blog.business.service.impl.SysConfigServiceImpl$$EnhancerBySpringCGLIB$$b53ada25.getConfigs(<generated>)
+	at com.zyd.blog.framework.config.FreeMarkerConfig.setSharedVariable(FreeMarkerConfig.java:44)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:333)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:157)
+	... 19 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: Table 'dblog.sys_config' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:497)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
+	... 67 common frames omitted
+2023-09-18 10:43:53 -Skipping MapperFactoryBean with name 'bizArticleMapper' and 'com.zyd.blog.persistence.mapper.BizArticleMapper' mapperInterface. Bean already defined with the same name!
+2023-09-18 10:43:53 -No MyBatis mapper was found in '[com.zyd.blog]' package. Please check your configuration.
+2023-09-18 10:43:54 -current oneblog version：v2.3.4
+2023-09-18 10:43:57 -博客部署完成，博客访问地址：http://localhost:8443
+2023-09-18 10:49:01 -current oneblog version：v2.3.4
+2023-09-18 10:49:04 -博客部署完成，博客访问地址：http://localhost:8085
+2023-09-18 11:16:44 -Path represents URL or has "url:" prefix: [http:/123.56.133.251:8080/articles/2023/09/15/1694737604116.html]
+2023-09-18 11:34:19 -current oneblog version：v2.3.4
+2023-09-18 11:34:22 -博客部署完成，博客访问地址：http://localhost:8085
+2023-09-18 11:37:45 -Unexpected exception occurred invoking async method: public void com.zyd.blog.business.service.impl.MailServiceImpl.send(com.zyd.blog.business.entity.Link,com.zyd.blog.business.enums.TemplateKeyEnum)
+org.springframework.mail.MailSendException: Mail server connection failed; nested exception is javax.mail.MessagingException: Unknown SMTP host: x;
+  nested exception is:
+	java.net.UnknownHostException: x. Failed messages: javax.mail.MessagingException: Unknown SMTP host: x;
+  nested exception is:
+	java.net.UnknownHostException: x
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:448)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:361)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:356)
+	at com.zyd.blog.business.service.impl.MailServiceImpl.sendMessage(MailServiceImpl.java:191)
+	at com.zyd.blog.business.service.impl.MailServiceImpl.send(MailServiceImpl.java:62)
+	at com.zyd.blog.business.service.impl.MailServiceImpl.send(MailServiceImpl.java:85)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115)
+	at org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler$DelegatingErrorHandlingCallable.call(ThreadPoolTaskScheduler.java:399)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: javax.mail.MessagingException: Unknown SMTP host: x
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:1970)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:642)
+	at javax.mail.Service.connect(Service.java:295)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437)
+	... 20 common frames omitted
+Caused by: java.net.UnknownHostException: x
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:196)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.sun.mail.util.SocketFetcher.createSocket(SocketFetcher.java:317)
+	at com.sun.mail.util.SocketFetcher.getSocket(SocketFetcher.java:233)
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:1938)
+	... 24 common frames omitted
+2023-09-18 11:42:01 -获取地址失败
+java.lang.NullPointerException: null
+	at com.zyd.blog.business.service.impl.BizCommentServiceImpl.setCurrentLocation(BizCommentServiceImpl.java:287)
+	at com.zyd.blog.business.service.impl.BizCommentServiceImpl.comment(BizCommentServiceImpl.java:188)
+	at com.zyd.blog.business.service.impl.BizCommentServiceImpl$$FastClassBySpringCGLIB$$6290b72c.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:88)
+	at com.zyd.blog.business.aspect.RedisCacheAspect.handle(RedisCacheAspect.java:45)
+	at sun.reflect.GeneratedMethodAccessor144.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:644)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:633)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:95)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
+	at com.zyd.blog.business.service.impl.BizCommentServiceImpl$$EnhancerBySpringCGLIB$$cfd5569.comment(<generated>)
+	at com.zyd.blog.controller.RestApiController.comment(RestApiController.java:130)
+	at com.zyd.blog.controller.RestApiController$$FastClassBySpringCGLIB$$a9141166.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:88)
+	at com.zyd.blog.business.aspect.BussinessLogAspect.writeLog(BussinessLogAspect.java:45)
+	at sun.reflect.GeneratedMethodAccessor236.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:644)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:633)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:95)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
+	at com.zyd.blog.controller.RestApiController$$EnhancerBySpringCGLIB$$8e29769d.comment(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:65)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.valves.RemoteIpValve.invoke(RemoteIpValve.java:747)
+	at org.apache.catalina.valves.RemoteIpValve.invoke(RemoteIpValve.java:747)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+2023-09-18 11:42:08 -Unexpected exception occurred invoking async method: public void com.zyd.blog.business.service.impl.MailServiceImpl.sendToAdmin(com.zyd.blog.business.entity.Comment)
+org.springframework.mail.MailSendException: Mail server connection failed; nested exception is javax.mail.MessagingException: Unknown SMTP host: x;
+  nested exception is:
+	java.net.UnknownHostException: x. Failed messages: javax.mail.MessagingException: Unknown SMTP host: x;
+  nested exception is:
+	java.net.UnknownHostException: x
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:448)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:361)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:356)
+	at com.zyd.blog.business.service.impl.MailServiceImpl.sendMessage(MailServiceImpl.java:191)
+	at com.zyd.blog.business.service.impl.MailServiceImpl.send(MailServiceImpl.java:62)
+	at com.zyd.blog.business.service.impl.MailServiceImpl.sendToAdmin(MailServiceImpl.java:169)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115)
+	at org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler$DelegatingErrorHandlingCallable.call(ThreadPoolTaskScheduler.java:399)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: javax.mail.MessagingException: Unknown SMTP host: x
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:1970)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:642)
+	at javax.mail.Service.connect(Service.java:295)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437)
+	... 20 common frames omitted
+Caused by: java.net.UnknownHostException: x
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:196)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.sun.mail.util.SocketFetcher.createSocket(SocketFetcher.java:317)
+	at com.sun.mail.util.SocketFetcher.getSocket(SocketFetcher.java:233)
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:1938)
+	... 24 common frames omitted
+2023-09-18 12:22:44 -current oneblog version：v2.3.4
+2023-09-18 12:22:47 -Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8085 is already in use
+2023-09-18 12:22:47 -
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8085 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8085 or configure this application to listen on another port.
+
+2023-09-18 12:47:00 -current oneblog version：v2.3.4
+2023-09-18 12:47:03 -博客部署完成，博客访问地址：http://localhost:8085
+2023-09-18 13:06:41 -Skipping MapperFactoryBean with name 'bizArticleMapper' and 'com.zyd.blog.persistence.mapper.BizArticleMapper' mapperInterface. Bean already defined with the same name!
+2023-09-18 13:06:41 -No MyBatis mapper was found in '[com.zyd.blog]' package. Please check your configuration.
+2023-09-18 13:06:43 -current oneblog version：v2.3.4
+2023-09-18 13:06:49 -博客部署完成，博客访问地址：http://localhost:8443
+2023-09-18 13:20:05 -current oneblog version：v2.3.4
+2023-09-18 13:20:11 -博客部署完成，博客访问地址：http://localhost:8085
+2023-09-18 14:52:18 -current oneblog version：v2.3.4
+2023-09-18 14:52:20 -博客部署完成，博客访问地址：http://localhost:8085
+2023-09-18 16:28:59 -current oneblog version：v2.3.4
+2023-09-18 16:29:00 -博客部署完成，博客访问地址：http://localhost:8085
+2023-09-18 16:56:47 -current oneblog version：v2.3.4
+2023-09-18 16:56:48 -博客部署完成，博客访问地址：http://localhost:8085
+2023-09-18 16:58:48 -Skipping MapperFactoryBean with name 'bizArticleMapper' and 'com.zyd.blog.persistence.mapper.BizArticleMapper' mapperInterface. Bean already defined with the same name!
+2023-09-18 16:58:48 -No MyBatis mapper was found in '[com.zyd.blog]' package. Please check your configuration.
+2023-09-18 16:58:49 -current oneblog version：v2.3.4
+2023-09-18 16:58:51 -博客部署完成，博客访问地址：http://localhost:8443
+2023-09-18 17:14:55 -current oneblog version：v2.3.4
+2023-09-18 17:14:57 -博客部署完成，博客访问地址：http://localhost:8085
+2023-09-18 17:17:03 -Skipping MapperFactoryBean with name 'bizArticleMapper' and 'com.zyd.blog.persistence.mapper.BizArticleMapper' mapperInterface. Bean already defined with the same name!
+2023-09-18 17:17:03 -No MyBatis mapper was found in '[com.zyd.blog]' package. Please check your configuration.
+2023-09-18 17:17:03 -current oneblog version：v2.3.4
+2023-09-18 17:17:05 -博客部署完成，博客访问地址：http://localhost:8443
+2023-09-18 17:56:22 -Skipping MapperFactoryBean with name 'bizArticleMapper' and 'com.zyd.blog.persistence.mapper.BizArticleMapper' mapperInterface. Bean already defined with the same name!
+2023-09-18 17:56:22 -No MyBatis mapper was found in '[com.zyd.blog]' package. Please check your configuration.
+2023-09-18 17:56:23 -current oneblog version：v2.3.4
+2023-09-18 17:56:25 -博客部署完成，博客访问地址：http://localhost:8443
+2023-09-18 18:10:59 -Skipping MapperFactoryBean with name 'bizArticleMapper' and 'com.zyd.blog.persistence.mapper.BizArticleMapper' mapperInterface. Bean already defined with the same name!
+2023-09-18 18:10:59 -No MyBatis mapper was found in '[com.zyd.blog]' package. Please check your configuration.
+2023-09-18 18:11:00 -current oneblog version：v2.3.4
+2023-09-18 18:11:02 -博客部署完成，博客访问地址：http://localhost:8443
+2023-09-18 18:18:28 -Skipping MapperFactoryBean with name 'bizArticleMapper' and 'com.zyd.blog.persistence.mapper.BizArticleMapper' mapperInterface. Bean already defined with the same name!
+2023-09-18 18:18:28 -No MyBatis mapper was found in '[com.zyd.blog]' package. Please check your configuration.
+2023-09-18 18:18:29 -current oneblog version：v2.3.4
+2023-09-18 18:18:31 -博客部署完成，博客访问地址：http://localhost:8443
+2023-09-18 18:20:45 -Skipping MapperFactoryBean with name 'bizArticleMapper' and 'com.zyd.blog.persistence.mapper.BizArticleMapper' mapperInterface. Bean already defined with the same name!
+2023-09-18 18:20:45 -No MyBatis mapper was found in '[com.zyd.blog]' package. Please check your configuration.
+2023-09-18 18:20:45 -current oneblog version：v2.3.4
+2023-09-18 18:20:47 -博客部署完成，博客访问地址：http://localhost:8443
+2023-09-18 18:25:30 -Skipping MapperFactoryBean with name 'bizArticleMapper' and 'com.zyd.blog.persistence.mapper.BizArticleMapper' mapperInterface. Bean already defined with the same name!
+2023-09-18 18:25:30 -No MyBatis mapper was found in '[com.zyd.blog]' package. Please check your configuration.
+2023-09-18 18:25:30 -current oneblog version：v2.3.4
+2023-09-18 18:25:32 -博客部署完成，博客访问地址：http://localhost:8443
+2023-09-18 20:10:55 -Skipping MapperFactoryBean with name 'bizArticleMapper' and 'com.zyd.blog.persistence.mapper.BizArticleMapper' mapperInterface. Bean already defined with the same name!
+2023-09-18 20:10:55 -No MyBatis mapper was found in '[com.zyd.blog]' package. Please check your configuration.
+2023-09-18 20:10:56 -current oneblog version：v2.3.4
+2023-09-18 20:10:59 -博客部署完成，博客访问地址：http://localhost:8443
+2023-09-18 20:17:59 -Skipping MapperFactoryBean with name 'bizArticleMapper' and 'com.zyd.blog.persistence.mapper.BizArticleMapper' mapperInterface. Bean already defined with the same name!
+2023-09-18 20:17:59 -No MyBatis mapper was found in '[com.zyd.blog]' package. Please check your configuration.
+2023-09-18 20:18:00 -current oneblog version：v2.3.4
+2023-09-18 20:18:03 -博客部署完成，博客访问地址：http://localhost:8443
+2023-09-18 20:22:39 -Skipping MapperFactoryBean with name 'bizArticleMapper' and 'com.zyd.blog.persistence.mapper.BizArticleMapper' mapperInterface. Bean already defined with the same name!
+2023-09-18 20:22:39 -No MyBatis mapper was found in '[com.zyd.blog]' package. Please check your configuration.
+2023-09-18 20:22:40 -current oneblog version：v2.3.4
+2023-09-18 20:22:43 -博客部署完成，博客访问地址：http://localhost:8443
+2023-09-18 20:28:14 -Skipping MapperFactoryBean with name 'bizArticleMapper' and 'com.zyd.blog.persistence.mapper.BizArticleMapper' mapperInterface. Bean already defined with the same name!
+2023-09-18 20:28:14 -No MyBatis mapper was found in '[com.zyd.blog]' package. Please check your configuration.
+2023-09-18 20:28:14 -current oneblog version：v2.3.4
+2023-09-18 20:28:17 -博客部署完成，博客访问地址：http://localhost:8443
+2023-09-18 20:32:30 -Skipping MapperFactoryBean with name 'bizArticleMapper' and 'com.zyd.blog.persistence.mapper.BizArticleMapper' mapperInterface. Bean already defined with the same name!
+2023-09-18 20:32:30 -No MyBatis mapper was found in '[com.zyd.blog]' package. Please check your configuration.
+2023-09-18 20:32:31 -current oneblog version：v2.3.4
+2023-09-18 20:32:34 -博客部署完成，博客访问地址：http://localhost:8443
+2023-09-18 21:10:48 -Skipping MapperFactoryBean with name 'bizArticleMapper' and 'com.zyd.blog.persistence.mapper.BizArticleMapper' mapperInterface. Bean already defined with the same name!
+2023-09-18 21:10:48 -No MyBatis mapper was found in '[com.zyd.blog]' package. Please check your configuration.
+2023-09-18 21:10:49 -current oneblog version：v2.3.4
+2023-09-18 21:10:52 -博客部署完成，博客访问地址：http://localhost:8443
+2023-09-18 21:12:57 -Skipping MapperFactoryBean with name 'bizArticleMapper' and 'com.zyd.blog.persistence.mapper.BizArticleMapper' mapperInterface. Bean already defined with the same name!
+2023-09-18 21:12:57 -No MyBatis mapper was found in '[com.zyd.blog]' package. Please check your configuration.
+2023-09-18 21:12:58 -current oneblog version：v2.3.4
+2023-09-18 21:13:01 -博客部署完成，博客访问地址：http://localhost:8443
+2023-09-18 21:17:20 -Skipping MapperFactoryBean with name 'bizArticleMapper' and 'com.zyd.blog.persistence.mapper.BizArticleMapper' mapperInterface. Bean already defined with the same name!
+2023-09-18 21:17:20 -No MyBatis mapper was found in '[com.zyd.blog]' package. Please check your configuration.
+2023-09-18 21:17:21 -current oneblog version：v2.3.4
+2023-09-18 21:17:24 -博客部署完成，博客访问地址：http://localhost:8443
+2023-09-18 21:18:55 -Skipping MapperFactoryBean with name 'bizArticleMapper' and 'com.zyd.blog.persistence.mapper.BizArticleMapper' mapperInterface. Bean already defined with the same name!
+2023-09-18 21:18:55 -No MyBatis mapper was found in '[com.zyd.blog]' package. Please check your configuration.
+2023-09-18 21:18:55 -current oneblog version：v2.3.4
+2023-09-18 21:18:58 -博客部署完成，博客访问地址：http://localhost:8443
+2023-09-18 21:31:44 -current oneblog version：v2.3.4
+2023-09-18 21:31:47 -博客部署完成，博客访问地址：http://localhost:8085
+2023-09-18 22:39:11 -Skipping MapperFactoryBean with name 'bizArticleMapper' and 'com.zyd.blog.persistence.mapper.BizArticleMapper' mapperInterface. Bean already defined with the same name!
+2023-09-18 22:39:11 -No MyBatis mapper was found in '[com.zyd.blog]' package. Please check your configuration.
+2023-09-18 22:39:12 -current oneblog version：v2.3.4
+2023-09-18 22:39:14 -博客部署完成，博客访问地址：http://localhost:8443
+2023-09-18 22:40:25 -current oneblog version：v2.3.4
+2023-09-18 22:40:28 -博客部署完成，博客访问地址：http://localhost:8085
+2023-09-18 22:41:34 -Skipping MapperFactoryBean with name 'bizArticleMapper' and 'com.zyd.blog.persistence.mapper.BizArticleMapper' mapperInterface. Bean already defined with the same name!
+2023-09-18 22:41:34 -No MyBatis mapper was found in '[com.zyd.blog]' package. Please check your configuration.
+2023-09-18 22:41:35 -current oneblog version：v2.3.4
+2023-09-18 22:41:38 -博客部署完成，博客访问地址：http://localhost:8443
+2023-09-18 23:10:23 -current oneblog version：v2.3.4
+2023-09-18 23:10:25 -博客部署完成，博客访问地址：http://localhost:8085
+2023-09-18 23:10:55 -Skipping MapperFactoryBean with name 'bizArticleMapper' and 'com.zyd.blog.persistence.mapper.BizArticleMapper' mapperInterface. Bean already defined with the same name!
+2023-09-18 23:10:55 -No MyBatis mapper was found in '[com.zyd.blog]' package. Please check your configuration.
+2023-09-18 23:10:56 -current oneblog version：v2.3.4
+2023-09-18 23:10:59 -博客部署完成，博客访问地址：http://localhost:8443
+2023-09-18 23:59:48 -Skipping MapperFactoryBean with name 'bizArticleMapper' and 'com.zyd.blog.persistence.mapper.BizArticleMapper' mapperInterface. Bean already defined with the same name!
+2023-09-18 23:59:48 -No MyBatis mapper was found in '[com.zyd.blog]' package. Please check your configuration.
+2023-09-18 23:59:49 -current oneblog version：v2.3.4
+2023-09-18 23:59:51 -博客部署完成，博客访问地址：http://localhost:8443
